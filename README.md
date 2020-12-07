@@ -48,7 +48,6 @@ Express application that reads an emplooyes CSV data and return a JSON of the sp
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#known-issues">Known Issues</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -106,74 +105,8 @@ installations.
    ```
 3. Run the next command. See <a href="#usage">Usage</a> to learn how to use it.
    ```sh
-   node bin/employeeQuery.js <ID> <PROPERTY_1>
+   node index.js
    ```
-
-**NOTE**: To run the app as a shell script follow the next steps
-
-1. Change the file permision.
-  ```sh
-  chmod +x bin/employeeQuery.js
-```
-
-2. Run the commands wthout `node` and by prepending the `file_name` with `./` 
-    (See the `.` dot before the slash `/`)
-  ```sh
-  bin/employeeQuery.js <ID> <PROPERTY_1>
-  ```
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-```sh
-node bin/employeeQuery.js <ID> <PROPERTY_1> <PROPERTY_2> ...
-```
-
-- The `ID` values goes from `1` to `10`.
-- The properties to choose from are:
-  - `id`
-  - `first_name`
-  - `email`
-  - `ip_address`
-
-- Search for specific user by `ID` number.
-  ```sh
-  # Input
-  node bin/employeeQuery.js 1
-
-  # Output
-  {
-    id: '1',
-    first_name: 'Giorgia',
-    last_name: 'Tyne',
-    email: 'gtyne0@deliciousdays.com',
-    ip_address: '176.146.145.226'
-  }
-  ```
-
-- Search for specific user by `property` value.
-  ```sh
-  # Input
-  node bin/employeeQuery.js Giorgia last_name
-
-  # Output 
-  { first_name: 'Giorgia', last_name: 'Tyne' }
-  ```
-
-- Search for specific User data with more than one arguments.
-  ```sh
-  # Input
-  node bin/employeeQuery.js Giorgia last_name email
-
-  # Output 
-  {
-    first_name: 'Giorgia',
-    last_name: 'Tyne',
-    email: 'gtyne0@deliciousdays.com'
-  }
-  ```
-
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/SaulPuentes/employees-csv-express/issues) for a list of proposed features (and known issues).
